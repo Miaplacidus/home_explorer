@@ -88,7 +88,7 @@ class HomePlans extends React.Component {
     const acreToSqft = 43560;
 
     const compatibleLotsIDs = this.props.combinations.filter((combo) => combo.homePlanId == this.state.selectedHomePlanID).map((combo) => combo.lotId)
-    const selectedHomePlan = homePlans.filter((plan) => plan.homePlanId === this.state.selectedHomePlanID)[0]
+    const selectedHomePlan = homePlans.find((plan) => plan.homePlanId === this.state.selectedHomePlanID)
 
     return(
       <>
